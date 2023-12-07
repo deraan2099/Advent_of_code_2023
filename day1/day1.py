@@ -15,6 +15,7 @@ file_path = os.getcwd()+"/day1/input1.rtf"
 test_file = os.getcwd()+"/day1/test.rtf"
 valuesa = []
 numbers2 = []
+#using regex with lookahead to avoid consuming characters (e.g. threeight will find both three and eight)
 regex2 = "(?=(\d|one|two|three|four|five|six|seven|eight|nine))"
 conv_dict = {"one":"1", "two":"2","three":"3","four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9"}
 with open(file_path) as infile:
