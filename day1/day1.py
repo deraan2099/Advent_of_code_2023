@@ -19,7 +19,6 @@ regex2 = "(?=(\d|one|two|three|four|five|six|seven|eight|nine))"
 conv_dict = {"one":"1", "two":"2","three":"3","four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9"}
 with open(file_path) as infile:
     for line in infile:
-        #print(line)
         re_groups = re.findall(regex2,line)
         first = conv_dict[re_groups[0]] if re_groups[0].isalpha() else re_groups[0]
         last = conv_dict[re_groups[-1]] if re_groups[-1].isalpha() else re_groups[-1]
